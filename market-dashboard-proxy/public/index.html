@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ 시장 분위기 대시보드 (Proxy) ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ 시장 분위기 대시보드 (Serverless Proxy) ✨</h1>
+            <p class="date" id="current-time">데이터 로딩 중...</p>
+            <p class="warning">
+                <span class="material-symbols-outlined">warning</span>
+                단순 참고용이며, 실제 투자 결정의 근거로 사용될 수 없습니다. 데이터 지연/오류가 있을 수 있습니다.
+            </p>
+        </header>
+
+        <section class="overall-assessment-section">
+            <div id="overall-assessment-card" class="overall-assessment neutral"> <!-- 기본 상태 -->
+                <div class="assessment-score">
+                    <span>종합 점수</span>
+                    <strong id="total-score" class="score-value">?</strong>
+                </div>
+                <div class="assessment-text">
+                    <h2 id="overall-assessment-text">데이터 로딩 중...</h2>
+                    <p id="overall-explanation" class="explanation">잠시만 기다려 주세요.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="indicators-section">
+            <h2><span class="material-symbols-outlined">monitoring</span> 개별 지표 분석</h2>
+            <div id="indicators-grid" class="indicators-grid">
+                <!-- 로딩 인디케이터 -->
+                <div class="loading-indicator">
+                    <p>데이터를 가져오고 분석하는 중입니다... 잠시만 기다려 주세요.</p>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p class="last-updated" id="last-updated-time">데이터 로딩 중...</p>
+            <p class="processing-time" id="processing-time"> </p>
+        </footer>
+    </div>
+
+    <!-- JavaScript 파일 로드 -->
+    <script src="script.js"></script>
+</body>
+</html>
