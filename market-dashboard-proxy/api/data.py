@@ -172,7 +172,7 @@ def get_overall_assessment(total_score, num_indicators):
 # --- Flask 앱 및 API 엔드포인트 정의 ---
 app = Flask(__name__)
 
-@app.route('/api/data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_market_data():
     """ 모든 시장 데이터를 가져오고 분석하여 JSON으로 반환하는 API 엔드포인트 """
     print("API 요청 수신: /api/data")
